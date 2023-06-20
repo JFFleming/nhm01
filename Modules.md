@@ -1,4 +1,4 @@
-#The module command
+# The module command
 
 Modules are a way to store useful programs on HPCs like nhm01. You can find which modules are currently installed on nhm01 by using this command:
 
