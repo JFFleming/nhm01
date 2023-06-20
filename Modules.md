@@ -12,6 +12,7 @@ a module will be removed from your user area when you logout, so you’ll need t
 Alternatively, you can add the appropriate module load command to a file in your home directory called .bash_profile. It’s a text file that comes with all user areas. If you copy that module load command to the section labelled #User specific environment and startup programs, you can ensure that it automatically loads every time you log in.
 When you open .bash profile, it should look like this
 
+```
 \# .bash_profile
 
 \# Get the aliases and functions
@@ -23,3 +24,4 @@ fi
 \# User specific environment and startup programs
 
 .
+```
