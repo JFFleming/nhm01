@@ -9,13 +9,13 @@ Logging into nhm01 can be a little more challenging than some other similar HPCs
 To log in to nhm01, use the following command, replacing \<user\> with your username:
 
 ```
-ssh -J <user>@login.uio.no <user>@nhm01.uio.no 
+ssh -J <user>@login.uio.no <user>@nhm01.hpc.uio.no 
 ```
 
 If you need to copy files to nhm01, you can do it like this:
 
 ```
-scp -o 'ProxyJump <user>@login.uio.no' <filename> <user>@nhm01.uio.no:/destination/of/copy
+scp -o 'ProxyJump <user>@login.uio.no' <filename> <user>@nhm01.hpc.uio.no:/destination/of/copy
 ```
 # How nhm01 is structured
 nhm01 is a relatively small HPC in comparison to the machines that you might be used to working on. nhm01's storage is partitioned in a very particular way. You can find this out (and find out how much storage is being used right now) using the command:
