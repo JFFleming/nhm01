@@ -3,8 +3,6 @@
 # Job name:
 #SBATCH --job-name=Example
 #
-# Project:
-#
 # Wall time limit
 #SBATCH --time=01-00:00:00
 #
