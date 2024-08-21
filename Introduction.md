@@ -17,7 +17,6 @@ To allow administration of your account by NHM please use the following command:
 ```
 setfacl -R -m u:torsths:rwx /home/<user>
 ```
-This command should also be used on any directory you set up anew.
 
 If you need to copy files to nhm01, you can do it like this:
 
@@ -65,12 +64,13 @@ As you can see here, all users on nhm01 share the filesystem /dev/mapper/internv
   For jobs that include lots of little calculations, such as phylogenetic tree searches, nhm01 might not be the optimal choice.
 
 # Generating folders
-nhm01 is a relatively small HPC in comparison to the machines that you might be used to working on. nhm01's storage is partitioned in a very particular way. You can find this out (and find out how much storage is being used right now) using the command:
+You can generate folders at the server using the mkdir command but to allow administration of it by NHM please use the following command:
 
 ```
-df-h
+mkdir <foldername>
+setfacl -R -m u:torsths:rwx <foldername>
 ```
-This will produce an output that looks like this
+
 
 # Technical Specifications
 \<Insert Here\>
