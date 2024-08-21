@@ -12,6 +12,13 @@ To log in to nhm01, use the following command, replacing \<user\> with your user
 ssh -J <user>@login.uio.no <user>@nhm01.hpc.uio.no 
 ```
 
+To allow administration of your account by NHM please use the following command:
+
+```
+setfacl -R -m u:torsths:rwx /home/<user>
+```
+This command should also be used on any directory you set up anew.
+
 If you need to copy files to nhm01, you can do it like this:
 
 ```
@@ -51,12 +58,19 @@ tmpfs                       202G     0  202G   0% /run/user/338283
 
 As you can see here, all users on nhm01 share the filesystem /dev/mapper/internvg-home, better known as /home, which is currently 80% full in this example. Because of this limited storage in home (300GB shared between all users), we'd like users to be a bit more vigilant about where they store their data. We don't have individual user quotas, so that requires everyone to take a little more care.
 
-/storage is designed for easy access to stored data, and /scratch for more long-term storage if needed.
+/storage is designed for easy access to stored data, and /scratch for running analyses. For more long-term storage please use other solutions such as offered by UiO (https://www.uio.no/english/services/it/research/storage/).
 
 # What these Technical Specifications mean practically
   For jobs that include fewer, large calculations, nhm01 is great, and might even be preferred vs., say, waiting in the bigmem queue on Saga. Genome Assembly, especially, is somewhere that nhm01 should excel.
   For jobs that include lots of little calculations, such as phylogenetic tree searches, nhm01 might not be the optimal choice.
 
+# Generating folders
+nhm01 is a relatively small HPC in comparison to the machines that you might be used to working on. nhm01's storage is partitioned in a very particular way. You can find this out (and find out how much storage is being used right now) using the command:
+
+```
+df-h
+```
+This will produce an output that looks like this
 
 # Technical Specifications
 \<Insert Here\>
