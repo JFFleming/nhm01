@@ -34,7 +34,7 @@ Nodelist is the address of where those nodes are.
 
 # Understanding a pbs Script
 
-But to submit a job, you have to wrtie a pbs script, and that means understanding how they work! Using Example.pbs, which you can find in this Github folder, this is a breakdown of the pbs format.
+But to submit a job, you have to wrtie a pbs script, and that means understanding how they work! Using [Example.pbs](Example_files/Example.pbs), this is a breakdown of the pbs format.
 Not all HPCs are the same, so it is important to note that if you are used to, for example, Saga, there are key difference between how the nhm01 pbs script is formatted. For example, we have no project numbers.
 
 ```
