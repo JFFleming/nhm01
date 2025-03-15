@@ -6,4 +6,4 @@ Additional information concern:
 
 [Installing your own software modules using conda]()
 
-[Submitting jobs]()
+[Submitting jobs](Submitting.md)
