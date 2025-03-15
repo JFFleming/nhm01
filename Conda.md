@@ -31,4 +31,5 @@ If you want to have this installation as your default installation you can use t
 ```
 echo -e "\nsource /storage/conda/torsths/bin/activate\n" >> ~/.bashrc
 ```
+After executing this command, you will have to log out and back in again for it to become effective for the first time.
 
