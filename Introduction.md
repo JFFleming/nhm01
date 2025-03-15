@@ -28,6 +28,7 @@ scp -o 'ProxyJump <user>@login.uio.no' <filename> <user>@nhm01.hpc.uio.no:/desti
 nhm01 is a relatively small HPC in comparison to the machines that you might be used to working on. nhm01's storage is partitioned in a very particular way. 
 
 There are three main folders:
+
 */home:*
 This folders contains your private home folder, it should only be used for private data and not your research and project data. No analyses should run here. You should only use minimal storage here. This folder has only a size of 300 Gb across all of users. Accordingly, your home directory should not have more than 5 Gb. This might be problematic with conda installations. Therefore please read the introduction to Conda installations.
 
