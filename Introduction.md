@@ -2,7 +2,7 @@
 nhm01 is the University of Oslo Natural History Museum's High Processing Computer. 
 
 # Applying for an account on nhm01
-If you need an account at nhm01, and you work at the museum, then email me at j.f.fleming(@)nhm.uio.no. This email should include the short form of your UiO username. I’ll forward it on to the Drift team, and normally this gets sorted in about a week.
+If you need an account at nhm01, and you work at the museum, then email me at t.h.struck(@)nhm.uio.no. This email should include the short form of your UiO username. I’ll forward it on to the Drift team, and normally this gets sorted in about a week.
 
 # Getting Started
 Logging into nhm01 can be a little more challenging than some other similar HPCs, as it requires a "Proxy Jump". Proxy Jumps are a way to use another server (in this case the University's login server) as a middle-way between two points.
@@ -45,7 +45,7 @@ You therefore need to clean up your folders in storage and keep it nice and stru
 
 Cleaning up means: 
 - Delete all files and folders you already know you will not need any longer (for example, where the run or installation failed). This just clutters the server with dead data and software.
-- Move data you are not actively using to long-term storage solutions. The storage is not for long term storage or backup. [For more long-term storage please use other solutions such as offered by UiO] (https://www.uio.no/english/services/it/research/storage/).
+- Move data you are not actively using to long-term storage solutions. The storage is not for long term storage or backup. [For more long-term storage please use other solutions such as offered by UiO](https://www.uio.no/english/services/it/research/storage/).
 - Compress folders you will not use for some time but are still part of the project to save space.
 
 ```
