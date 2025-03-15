@@ -29,6 +29,6 @@ This will then be your base environment for all installations and analyses until
 If you want to have this installation as your default installation you can use the following command:
 
 ```
-echo "source /storage/conda/torsths/bin/activate" >> ~/.bashrc
+echo "\nsource /storage/conda/torsths/bin/activate\n" >> ~/.bashrc
 ```
 
