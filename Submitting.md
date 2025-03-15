@@ -67,7 +67,7 @@ These two parameters are linked together.
 
 
 ```
-#SBATCH --chdir=/home/username/path/to/location
+#SBATCH --chdir=/storage/path/to/location
 ```
 "--chdir=" tells the HPC where the files it should act on are. So this should be the address of where you are keeping those files. You can find that out by typing 'pwd' in that directory.
 
