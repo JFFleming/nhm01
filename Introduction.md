@@ -27,7 +27,7 @@ scp -o 'ProxyJump <user>@login.uio.no' <filename> <user>@nhm01.hpc.uio.no:/desti
 nhm01 is a relatively small HPC in comparison to the machines that you might be used to working on. nhm01's storage is partitioned in a very particular way. You can find this out (and find out how much storage is being used right now) using the command:
 
 ```
-df-h
+df -h
 ```
 This will produce an output that looks like this
 
