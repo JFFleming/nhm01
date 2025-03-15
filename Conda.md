@@ -25,5 +25,10 @@ You can always call up this conda installation on the command line (or any bash 
 ```
 source /storage/conda/torsths/etc/profile.d/conda.sh
 ```
+This will then be your base environment for all installations and analyses until you call up another conda installation.
+If you want to have this installation as your default installation you can use the following command:
 
+```
+echo "source /storage/conda/torsths/bin/activate" >> ./.bashrc
+```
 
