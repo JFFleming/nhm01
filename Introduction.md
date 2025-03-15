@@ -24,7 +24,7 @@ If you need to copy files to nhm01, you can do it like this:
 scp -o 'ProxyJump <user>@login.uio.no' <filename> <user>@nhm01.hpc.uio.no:/destination/of/copy
 ```
 
-# Storage usage (IMPORTANT TO READ BY EVERYONE) and where to store and run data
+# Storage usage (IMPORTANT TO BE READ BY EVERYONE) and where to store and run data
 nhm01 is a relatively small HPC in comparison to the machines that you might be used to working on. nhm01's storage is partitioned in a very particular way. 
 
 There are three main folders:
