@@ -15,9 +15,15 @@ mkdir -m 700 <username>
 # Go into this folder and install miniconda 3 in there:
 
 cd <username>
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm ~/miniconda3/miniconda.sh 
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /storage/conda/<username>/miniconda.sh
+bash ./miniconda.sh -b -u -p /storage/conda/<username>
+rm ./miniconda.sh 
+```
+
+You can always call up this conda installation on the command line (or any bash script) using:
+
+```
+source /storage/conda/torsths/etc/profile.d/conda.sh
 ```
 
 
