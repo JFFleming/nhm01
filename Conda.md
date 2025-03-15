@@ -33,3 +33,51 @@ echo -e "\nsource /storage/conda/<username>/bin/activate\n" >> ~/.bashrc
 ```
 After executing this command, you will have to log out and back in again for it to become effective for the first time.
 
+# Some useful conda commands
+Here are some commands, which might be good to know:
+
+```
+#The cache can be cleaned by running
+conda clean -a
+
+#Creating an environment by in default folder
+conda create -n <my-env>
+
+#Creating an environment by specifying the environment path with the --prefix option
+conda create -p <path-to-a-folder>/myenvs/<my-env>
+
+#Activate environment
+conda activate <my-env>
+
+#Activate environment by specifying the folder upfront
+conda activate <path-to-a-folder>/myenvs/<my-env>
+
+#Install sources (e.g., numpy) in an environment after activation
+conda install numpy
+#or also specify the channel to find the source (e.g., scipy)
+conda install -c conda-forge scipy
+
+#Creating an environment by in default folder and install a package from either conda-forge or bioconda repository
+conda create -n <my-env> -c conda-forge -c bioconda <package>=<version> #(e.g., earlgrey=5.1.1)
+
+#Add channels to channel path
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+
+#Some packages (e.g., jupyter) can only be installed with pip, but this can also be done through Conda:
+conda install pip 
+pip install jupyter
+
+#List the packages installed in the environment by running
+conda list
+
+#List the environments by running
+conda env list
+
+#Remove an environment by using remove or uninstall
+conda deactivate
+conda remove -n my-env --all
+conda uninstall -n my-env --all
+```
+
