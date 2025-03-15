@@ -30,14 +30,19 @@ nhm01 is a relatively small HPC in comparison to the machines that you might be 
 There are three main folders:
 
 */home:*
+
 This folders contains your private home folder, it should only be used for private data and not your research and project data. No analyses should run here. You should only use minimal storage here. This folder has only a size of 300 Gb across all of users. Accordingly, your home directory should not have more than 5 Gb. This might be problematic with conda installations. Therefore please read the introduction to Conda installations.
 
 */scratch:*
+
 This folder is for running analyses. It is not for storage. All data should be stored on /storage.
 
 */storage:* 
-This folder is designed for easy access to stored data. Additionally, it is the folder which includes the software installations as modules and should be used for the Conda installations as well. You can also run analyses here without problems. Accordingly, it is the largest folder on NHM01 with 64 Tb. Even though it is the largest one, it can get full quite quickly as well. 
+
+This folder is designed for easy access to stored data. Additionally, it is the folder which includes the software installations as modules and should be used for the Conda installations as well. You can also run analyses here without problems. Accordingly, it is the largest folder on NHM01 with 64 Tb. Even though it is the largest one, it can get full quite quickly as well.
+
 You therefore need to clean up your folders in storage and keep it nice and structured there as well.
+
 Cleaning up means: 
 - Delete all files and folders you already know you will not need any longer (for example, where the run or installation failed). This just clutters the server with dead data and software.
 - Move data you are not actively using to long-term storage solutions. The storage is not for long term storage or backup. [For more long-term storage please use other solutions such as offered by UiO] (https://www.uio.no/english/services/it/research/storage/).
@@ -48,6 +53,7 @@ tar -czvf dir-compressed.tar.gz /path/to/folder #(e.g., /home/torsths/test)
 ```
 
 *Checking folder sizes:* 
+
 You can check the size of a specific folder (or file) using the command:
 
 ```
