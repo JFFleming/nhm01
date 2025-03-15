@@ -12,7 +12,7 @@ cd /storage/conda
 
 mkdir -m 700 <username> 
 
-# Go into this folder and install miniconda 3 in there:
+# Go into this folder and install miniconda 3 in there, for example with your username (in my case <username>=torsths):
 
 cd <username>
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /storage/conda/<username>/miniconda.sh
@@ -23,13 +23,13 @@ rm ./miniconda.sh
 You can always call up this conda installation on the command line (or any bash script) using:
 
 ```
-source /storage/conda/torsths/etc/profile.d/conda.sh
+source /storage/conda/<username>/etc/profile.d/conda.sh
 ```
 This will then be your base environment for all installations and analyses until you call up another conda installation.
 If you want to have this installation as your default installation you can use the following command:
 
 ```
-echo -e "\nsource /storage/conda/torsths/bin/activate\n" >> ~/.bashrc
+echo -e "\nsource /storage/conda/<username>/bin/activate\n" >> ~/.bashrc
 ```
 After executing this command, you will have to log out and back in again for it to become effective for the first time.
 
