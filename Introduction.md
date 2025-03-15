@@ -31,7 +31,7 @@ There are three main folders:
 
 */home:*
 
-This folders contains your private home folder, it should only be used for private data and not your research and project data. No analyses should run here. You should only use minimal storage here. This folder has only a size of 300 Gb across all of users. Accordingly, your home directory should not have more than 5 Gb. This might be problematic with conda installations. Therefore please read the introduction to Conda installations.
+This folders contains your private home folder, it should only be used for private data and not your research and project data. No analyses should run here. You should only use minimal storage here. This folder has only a size of 300 Gb across all of users. Accordingly, your home directory should not have more than 5 Gb. This might be problematic with conda installations. Therefore please read the introduction to [Conda installations](Conda.md).
 
 */scratch:*
 
@@ -39,7 +39,7 @@ This folder is for running analyses. It is not for storage. All data should be s
 
 */storage:* 
 
-This folder is designed for easy access to stored data. Additionally, it is the folder which includes the software installations as modules and should be used for the Conda installations as well. You can also run analyses here without problems. Accordingly, it is the largest folder on NHM01 with 64 Tb. Even though it is the largest one, it can get full quite quickly as well.
+This folder is designed for easy access to stored data. Additionally, it is the folder which includes the software installations as modules and should be used for the [Conda installations](Conda.md) as well. You can also run analyses here without problems. Accordingly, it is the largest folder on NHM01 with 64 Tb. Even though it is the largest one, it can get full quite quickly as well.
 
 You therefore need to clean up your folders in storage and keep it nice and structured there as well.
 
