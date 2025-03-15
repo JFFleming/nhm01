@@ -4,6 +4,6 @@ Additional information concern:
 
 [Loading pre-installed software modules](Modules.md)
 
-[Installing your own software modules using conda](Conda.md)
+[Installing your own software using conda](Conda.md)
 
 [Submitting jobs](Submitting.md)
