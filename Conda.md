@@ -81,3 +81,22 @@ conda remove -n my-env --all
 conda uninstall -n my-env --all
 ```
 
+# Uninstalling a conda installation
+In the case it is needed you can uninstall a miniconda installation as follows (for example, an installation in your home directory as used in here).
+```
+cd /home/<username>
+conda deactivate
+rm -rf ./miniconda3
+
+#if no other conda installation is present you can remove the following entirely
+rm -rf ./.condarc ./.conda
+
+#if you have other conda installations present you need to do the following
+nano ./.conda/environments.txt
+#remove all environments referencing environments to the deleted installation and save it
+
+#you should also check your .bashrc file if any reference to the uninstalled should be deleted from there
+nano ~/.bashrc
+#remove all environments referencing environments to the deleted installation and save it
+
+```
