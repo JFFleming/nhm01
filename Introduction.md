@@ -2,7 +2,7 @@
 nhm01 is the University of Oslo Natural History Museum's High Processing Computer. 
 
 # Applying for an account on nhm01
-If you need an account at nhm01, and you work at the museum, then email me at j.f.fleming(@)nhm.uio.no. This email should include the short form of your UiO username. I’ll forward it on to the Drift team, and normally this gets sorted in about a week.
+If you need an account at nhm01, and you work at the museum, then email me at t.h.struck(@)nhm.uio.no. This email should include the short form of your UiO username. I’ll forward it on to the Drift team, and normally this gets sorted in about a week.
 
 # Getting Started
 Logging into nhm01 can be a little more challenging than some other similar HPCs, as it requires a "Proxy Jump". Proxy Jumps are a way to use another server (in this case the University's login server) as a middle-way between two points.
@@ -23,12 +23,51 @@ If you need to copy files to nhm01, you can do it like this:
 ```
 scp -o 'ProxyJump <user>@login.uio.no' <filename> <user>@nhm01.hpc.uio.no:/destination/of/copy
 ```
-# How nhm01 is structured
-nhm01 is a relatively small HPC in comparison to the machines that you might be used to working on. nhm01's storage is partitioned in a very particular way. You can find this out (and find out how much storage is being used right now) using the command:
+
+# Storage usage (IMPORTANT TO BE READ BY EVERYONE) and where to store and run data
+nhm01 is a relatively small HPC in comparison to the machines that you might be used to working on. nhm01's storage is partitioned in a very particular way. 
+
+There are three main folders:
+
+*/home:*
+
+This folders contains your private home folder, it should only be used for private data and not your research and project data. No analyses should run here. You should only use minimal storage here. This folder has only a size of 300 Gb across all of users. Accordingly, your home directory should not have more than 5 Gb. This might be problematic with conda installations. Therefore please read the introduction to [Conda installations](Conda.md).
+
+*/scratch:*
+
+This folder is for running analyses. It is not for storage. All data should be stored on /storage.
+
+*/storage:* 
+
+This folder is designed for easy access to stored data. Additionally, it is the folder which includes the software installations as modules and should be used for the [Conda installations](Conda.md) as well. You can also run analyses here without problems. Accordingly, it is the largest folder on NHM01 with 64 Tb. Even though it is the largest one, it can get full quite quickly as well.
+
+You therefore need to clean up your folders in storage and keep it nice and structured there as well.
+
+Cleaning up means: 
+- Delete all files and folders you already know you will not need any longer (for example, where the run or installation failed). This just clutters the server with dead data and software.
+- Move data you are not actively using to long-term storage solutions. The storage is not for long term storage or backup. [For more long-term storage please use other solutions such as offered by UiO](https://www.uio.no/english/services/it/research/storage/).
+- Compress folders you will not use for some time but are still part of the project to save space.
 
 ```
-df-h
+tar -czvf dir-compressed.tar.gz /path/to/folder #(e.g., /home/torsths/test)
 ```
+
+*Checking folder sizes:* 
+
+You can check the size of a specific folder (or file) using the command:
+
+```
+du -h -d 1 /path/to/folder #(e.g., /home/torsths)
+```
+
+This will provide you with size of each folder at the first level (-d 1) in that path in a human readable format (-h). If you also want to get the information within the folders of the first level use, for example, -d 2 and so forth to get deeper into the folder structure.
+
+You can find information about the general structure and how much storage is being used right now by using the command:
+
+```
+df -h
+```
+
 This will produce an output that looks like this
 
 ```
@@ -57,8 +96,6 @@ tmpfs                       202G     0  202G   0% /run/user/338283
 
 As you can see here, all users on nhm01 share the filesystem /dev/mapper/internvg-home, better known as /home, which is currently 80% full in this example. Because of this limited storage in home (300GB shared between all users), we'd like users to be a bit more vigilant about where they store their data. We don't have individual user quotas, so that requires everyone to take a little more care.
 
-/storage is designed for easy access to stored data, and /scratch for running analyses. For more long-term storage please use other solutions such as offered by UiO (https://www.uio.no/english/services/it/research/storage/).
-
 # What these Technical Specifications mean practically
   For jobs that include fewer, large calculations, nhm01 is great, and might even be preferred vs., say, waiting in the bigmem queue on Saga. Genome Assembly, especially, is somewhere that nhm01 should excel.
   For jobs that include lots of little calculations, such as phylogenetic tree searches, nhm01 might not be the optimal choice.
@@ -70,8 +107,4 @@ You can generate folders at the server using the mkdir command but to allow admi
 mkdir <foldername>
 setfacl -R -m u:torsths:rwx <foldername>
 ```
-
-
-# Technical Specifications
-\<Insert Here\>
 

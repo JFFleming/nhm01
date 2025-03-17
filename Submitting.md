@@ -34,7 +34,7 @@ Nodelist is the address of where those nodes are.
 
 # Understanding a pbs Script
 
-But to submit a job, you have to wrtie a pbs script, and that means understanding how they work! Using Example.pbs, which you can find in this Github folder, this is a breakdown of the pbs format.
+But to submit a job, you have to wrtie a pbs script, and that means understanding how they work! Using [Example.pbs](Example_files/Example.pbs), this is a breakdown of the pbs format.
 Not all HPCs are the same, so it is important to note that if you are used to, for example, Saga, there are key difference between how the nhm01 pbs script is formatted. For example, we have no project numbers.
 
 ```
@@ -67,7 +67,7 @@ These two parameters are linked together.
 
 
 ```
-#SBATCH --chdir=/home/username/path/to/location
+#SBATCH --chdir=/storage/path/to/location
 ```
 "--chdir=" tells the HPC where the files it should act on are. So this should be the address of where you are keeping those files. You can find that out by typing 'pwd' in that directory.
 
